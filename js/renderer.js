@@ -1,5 +1,7 @@
 const render = () => {
   renderAboutSection();
+  renderProjectsSection();
+  renderCertificationsSection();
 };
 
 const renderAboutSection = () => {
@@ -86,6 +88,149 @@ const renderComponent = (info, container) => {
             </div>
             `;
     container.appendChild(itemContainer);
+  });
+};
+
+const renderProjectsSection = () => {
+  const projects = [
+    {
+      title: "Portfolio",
+      github: "https://github.com/ariveroi/Portfolio-2.0",
+      main_language: "Javascript",
+      in_progress: true,
+    },
+    {
+      title: "Learn With Quiz",
+      github: "https://github.com/ariveroi/Learn-with-quiz",
+      main_language: "React",
+      in_progress: true,
+    },
+    {
+      title: "L'alberca web",
+      github: "https://github.com/ariveroi/lalberca-web",
+      main_language: "React",
+      in_progress: true,
+    },
+    {
+      title: "Padel Tournaments",
+      github: "https://github.com/ariveroi/padel-torunaments",
+      main_language: "React Native",
+      in_progress: true,
+    },
+    // {
+    //   title: "Templates for React",
+    //   github: "https://github.com/ariveroi/templates-for-react",
+    //   main_language: "React",
+    //   in_progress: true,
+    // },
+    {
+      title: "CMS Tool",
+      github: "https://github.com/ariveroi/cms-tool",
+      main_language: "React | Django",
+      in_progress: true,
+    },
+    {
+      title: "AI Flapy Bird",
+      github: "https://github.com/ariveroi/aiflapy",
+      main_language: "Python",
+      in_progress: true,
+    },
+    {
+      title: "ToDo Chrome Extension",
+      github: "https://github.com/ariveroi/todo-extension",
+      main_language: "Javascript",
+      in_progress: true,
+    },
+    {
+      title: "Drag and Drop",
+      github: "https://github.com/ariveroi/kanban-drag-and-drop",
+      main_language: "Javascript",
+      in_progress: true,
+    },
+    // {
+    //   title: "Web Bundler",
+    //   github: "https://github.com/ariveroi/react-redux-ts",
+    //   main_language: "Typescript",
+    //   in_progress: true,
+    // },
+    // {
+    //   title: "Travel App",
+    //   github: "https://github.com/ariveroi/travel-app",
+    //   main_language: "React Native",
+    //   in_progress: true,
+    // },
+  ];
+
+  const projectsContainer = document.querySelector(".projects-container");
+
+  projects.forEach((project) => {
+    const projectContainer = document.createElement("div");
+    projectContainer.classList.add("project-container");
+    projectContainer.innerHTML = `
+    <div class="project-item">
+      <div class="project-item-header">
+        <h3 class="project-item-title">
+          <a href="" target="_blank">${project.title}</a>
+        </h3>
+      </div>
+      <div class="project-item-footer">
+        <i class="icon fa-brands fa-github"></i>
+        <a href="#" class="project-tag">${project.main_language}</a>
+      </div>
+    </div>
+            `;
+    projectContainer.addEventListener("click", () => {
+      window.open(project.github, "_blank");
+    });
+    projectsContainer.appendChild(projectContainer);
+  });
+};
+
+const showGithub = (url) => {
+  window.open(url, "_blank");
+};
+
+const renderCertificationsSection = () => {
+  const certifications = [
+    {
+      title: "AWS Certified Solutions Architect - Associate",
+      company: "Amazon Web Services",
+      date: "March 2022",
+      img: "assets/aws.svg",
+    },
+    {
+      title: "Salesforce Certified Administrator",
+      company: "Salesforce",
+      date: "July 2022",
+      img: "assets/salesforce.png",
+    },
+  ];
+
+  const certificationsContainer = document.querySelector(
+    ".certifications-container"
+  );
+  certifications.forEach((certification) => {
+    const certificationContainer = document.createElement("div");
+    certificationContainer.classList.add("certification-container");
+    certificationContainer.innerHTML = `
+    <div class="certification-item">
+      
+      <div class="certification-item-img">
+        <img src="${certification.img}" alt="${certification.company}" class="certification-item-logo">
+      </div>
+      <div class="certification-item-header">
+        <h3 class="certification-item-title">
+          <a href="" target="_blank">${certification.title}</a>
+        </h3>
+        <h4 class="certification-item-company">${certification.company}</h4>
+      </div>
+      <div class="certification-item-footer">
+        <span class="certification-item-date">${certification.date}</span>
+      
+      </div>
+    </div>
+            `;
+    certificationsContainer.appendChild(certificationContainer);
   });
 };
 

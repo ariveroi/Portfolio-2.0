@@ -17,3 +17,16 @@ button.addEventListener("mouseout", () => {
   const tearsLake = document.querySelector(".tears-lake");
   tearsLake.remove();
 });
+
+// show contact info
+const showContactInfoButton = document.querySelector(".show-contact-info");
+const contactInfo = document.querySelector(".contact-info");
+showContactInfoButton.addEventListener("click", () => {
+  contactInfo.classList.toggle("active");
+});
+
+//close contact info
+const closeContactInfoButton = document.querySelector(".close-contact-info");
+closeContactInfoButton.addEventListener("click", () => {
+  contactInfo.classList.toggle("active");
+});
