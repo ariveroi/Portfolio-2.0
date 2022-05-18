@@ -12,13 +12,13 @@ const renderAboutSection = () => {
       date: "March 2022 - Present",
       description: "TBD",
     },
-    {
-      title: "Cloud Architect",
-      company: "Accenture",
-      date: "January 2022 - March 2022",
-      description:
-        "Development of infrastructures based on cloud environments, making use of the technologies and services offered by Amazon Web Services (AWS).",
-    },
+    // {
+    //   title: "Cloud Architect",
+    //   company: "Accenture",
+    //   date: "January 2022 - March 2022",
+    //   description:
+    //     "Development of infrastructures based on cloud environments, making use of the technologies and services offered by Amazon Web Services (AWS).",
+    // },
     {
       title: "Product Manager Intern",
       company: "Amazon",
@@ -26,13 +26,13 @@ const renderAboutSection = () => {
       description:
         "Development of a web-based tool to automate internal business processes. I used AWS to manage the back-end logic and Vue as the front-end framework. Also, I did product management tasks, gathering feedback from users to improve the tool, or trying to gain adoption of it.",
     },
-    {
-      title: "Political Coordinator",
-      company: "Spanish Senate",
-      date: "September 2020 - May 2021",
-      description:
-        "Management and organization of a parliamentary group within the Spanish Senate. In addition, if time allowed, I developed software tools to streamline and automate some processes.",
-    },
+    // {
+    //   title: "Political Coordinator",
+    //   company: "Spanish Senate",
+    //   date: "September 2020 - May 2021",
+    //   description:
+    //     "Management and organization of a parliamentary group within the Spanish Senate. In addition, if time allowed, I developed software tools to streamline and automate some processes.",
+    // },
     {
       title: "Cybersecurity Consultant",
       company: "Deloitte",
@@ -50,18 +50,17 @@ const renderAboutSection = () => {
 
   const education = [
     {
-      title: "Bachelor of Science",
+      title: "Bachelor of Engineering",
       company: "Universidad Politécnica de Madrid",
-      date: "September 2018 - May 2020",
+      date: "September 2014 - July 2020",
       description:
-        "Computer Science and Engineering. Specialty: Software Engineering.",
+        "Telecommunication Technologies and Services Engineering. Specialty: Software Engineering.",
     },
     {
-      title: "Certificate of Proficiency",
-      company: "Universidad Politécnica de Madrid",
-      date: "September 2018",
-      description:
-        "Computer Science and Engineering. Specialty: Software Engineering.",
+      title: "School",
+      company: "Colegio Retamar",
+      date: "September 2002 - June 2014",
+      description: "",
     },
   ];
 
@@ -170,7 +169,7 @@ const renderProjectsSection = () => {
     <div class="project-item">
       <div class="project-item-header">
         <h3 class="project-item-title">
-          <a href="" target="_blank">${project.title}</a>
+          ${project.title}
         </h3>
       </div>
       <div class="project-item-footer">
@@ -220,7 +219,7 @@ const renderCertificationsSection = () => {
       </div>
       <div class="certification-item-header">
         <h3 class="certification-item-title">
-          <a href="" target="_blank">${certification.title}</a>
+          ${certification.title}
         </h3>
         <h4 class="certification-item-company">${certification.company}</h4>
       </div>

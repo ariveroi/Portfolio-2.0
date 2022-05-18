@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Agus Rivero</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-switcher.css" />
     <link rel="stylesheet" href="css/skins/color-1.css" />
     <link
       rel="stylesheet"
@@ -14,9 +15,48 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- ===== Style Switcher ===== -->
+    <link
+      rel="stylesheet"
+      href="css/skins/color-1.css"
+      class="alternate-style"
+      title="color-1"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="css/skins/color-2.css"
+      class="alternate-style"
+      title="color-2"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="css/skins/color-3.css"
+      class="alternate-style"
+      title="color-3"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="css/skins/color-4.css"
+      class="alternate-style"
+      title="color-4"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="css/skins/color-5.css"
+      class="alternate-style"
+      title="color-5"
+      disabled
+    />
   </head>
 
   <body>
+    <div class="sidebar-toggler">
+      <div class="toggle-sidebar"></div>
+    </div>
     <div class="main-container">
       <div class="aside">
         <div class="logo"></div>
@@ -49,21 +89,20 @@
         </ul>
       </div>
       <div class="main-content">
-        <section class="home section">
+        <section class="home section" id="home">
           <div class="container">
             <div class="row">
               <div class="home-info padd-15">
                 <h3 class="hello">Hi! I'm <span>Agus Rivero</span></h3>
                 <h3 class="my-profession">
-                  And I'm a <span class="typing">Software Developer</span>
+                  And I'm a <span class="typing"></span>
                 </h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-                  dignissimos ducimus repellendus dolor sapiente quae
-                  perspiciatis non ad. Tempora nostrum commodi soluta iure
-                  quisquam praesentium blanditiis molestiae perferendis.
+                  Graduated in Telecommunication Technologies and Services
+                  Engineering, with experience in Full-Stack development of web
+                  applications, and in project management.
                 </p>
-                <a href="" class="btn hireme">Hire me!</a>
+                <a href="#contact" class="btn hireme">Hire me!</a>
               </div>
               <div class="home-img padd-15">
                 <img src="assets/me.jpg" alt="" />
@@ -104,39 +143,52 @@
                 </div>
               </div>
               <div class="contact-info-buttons">
-                <a href="#" class="btn close-contact-info">Close</a>
+                <a href="#about" class="btn close-contact-info">Close</a>
               </div>
             </div>
           </div>
-          <div class="container">
+          <div class="container" id="about">
             <div class="row">
               <h2 class="section-title padd-15">About me</h2>
             </div>
             <div class="row">
               <p class="about-text padd-15">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptatum veritatis atque quia voluptate recusandae ad itaque,
-                asperiores maiores qui quo. Eveniet ullam necessitatibus quae
-                accusamus dicta, sunt nostrum repellat sapiente! Tenetur esse
-                vero placeat aliquam nulla perspiciatis voluptates molestiae
-                atque, impedit quia maxime soluta expedita sunt consequuntur
-                optio praesentium odit totam voluptatem maiores? Commodi officia
-                recusandae quia ullam, perspiciatis non? Laborum possimus quasi
-                harum ipsam, aspernatur corrupti alias temporibus, quae iure
-                minus, excepturi odit animi voluptatum? Tempora atque reiciendis
-                fugit harum? Magnam, ex soluta praesentium officiis quibusdam
-                exercitationem earum a. Recusandae iure nulla deserunt nihil a
-                optio quidem maxime voluptates eligendi, consequuntur dolores
-                perferendis laboriosam, mollitia eos ut facere quasi excepturi
-                hic expedita voluptate placeat officia tenetur cumque deleniti.
-                Nesciunt.
+                I am a hard worker, lover of new challenges and eager to learn
+                and improve every day. My goal is to learn the latest
+                technologies to improve and facilitate, as much as possible, the
+                business and lives of those who need it.
+              </p>
+              <p class="about-text padd-15">
+                I have worked in different sectors throughout my professional
+                career. I started as a cybersecurity consultant at Deloitte,
+                where I learned the basic security fundamentals that companies
+                should have. Later, I had an internship at Amazon, where I was
+                able to enter the world of the "Cloud", using Amazon Web
+                Services. During this internship, I developed a "Full-Stack"
+                application, developing the front-end with Vue.js and all the
+                back-end using AWS services such as Lambda, DynamoDB, API
+                Gateway or SES, integrating the deployment in a single file
+                using the native AWS Cloud Development Kit (CDK). I have also
+                worked, briefly, at Accenture as a Cloud Architect in the AWS
+                team.
+              </p>
+              <p class="about-text padd-15">
+                During these years, on my own I have been developing small
+                projects to learn, improve and consolidate the knowledge I have
+                acquired over the years.
+              </p>
+              <p class="about-text padd-15">
+                Currently working at NTS as a Salesforce Developer. Eager to
+                keep learning and to give the best of me every day.
               </p>
             </div>
             <div class="row">
               <div class="about-buttons padd-15">
-                <a href="#" class="btn download-cv">Download CV</a>
-                <a href="#" class="btn hireme">Hire me!</a>
-                <a href="#" class="btn show-contact-info">Contact Info</a>
+                <a href="#" class="btn download-cv" download="file.pdf"
+                  >Download CV</a
+                >
+                <a href="#contact" class="btn hireme">Hire me!</a>
+                <!-- <a href="#about" class="btn show-contact-info">Contact Info</a> -->
               </div>
             </div>
             <div class="row">
@@ -151,7 +203,7 @@
             </div>
           </div>
         </section>
-        <section class="projects section">
+        <section class="projects section" id="projects">
           <div class="container">
             <div class="row">
               <h2 class="section-title padd-15">Projects</h2>
@@ -167,23 +219,76 @@
               <h2 class="section-title padd-15">Certifications</h2>
             </div>
             <div class="row">
-              <div class="certifications-container">  
+              <div class="certifications-container"></div>
             </div>
-          </div>
-          <!-- <div class="container" id="contact">
-            <div class="row">
-                <h2 class="section-title padd-15">Contact</h2>
-            </div>
-          </div> -->
-          </div>
+            <div class="container" id="contact">
+              <div class="row">
+                <h2 class="section-title padd-15">Contact me!</h2>
+              </div>
+              <div class="row">
+                <form class="contact-form">
+                  <label>
+                    Your email:
+                    <input type="email" name="email" />
+                  </label>
+                  <label>
+                    Your message:
+                    <textarea name="message"></textarea>
+                  </label>
+                  <!-- your other form fields go here -->
+                  <button id="submit-form-button" class="btn send-message">
+                    Send
+                  </button>
+                </form>
+                <div class="contact-buttons">
+                  <a
+                    href="https://github.com/ariveroi"
+                    target="_blank"
+                    class="contact-link"
+                    ><i class="fa-brands fa-github"></i><span>Github</span></a
+                  >
+                  <a
+                    href="https://www.linkedin.com/in/agustin-rivero/"
+                    target="_blank"
+                    class="contact-link"
+                    ><i class="fa-brands fa-linkedin"></i
+                    ><span>LinkedIn</span></a
+                  >
+                  <a
+                    href="mailto:agusrive96@gmail.com"
+                    target="_blank"
+                    class="contact-link"
+                    ><i class="fa-solid fa-envelope"></i><span>Email</span></a
+                  >
+                </div>
+              </div>
             </div>
           </div>
         </section>
+      </div>
+    </div>
+    <div class="style-switcher">
+      <div class="style-switcher-toggler s-icon">
+        <i class="fas fa-cog fa-spin"></i>
+      </div>
+      <div class="day-night s-icon">
+        <i class="fas"></i>
+      </div>
+      <h4>Theme Colors</h4>
+      <div class="colors">
+        <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+        <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+        <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+        <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+        <span class="color-5" onclick="setActiveStyle('color-5')"></span>
       </div>
     </div>
 
     <!--- Scripts -->
     <script src="js/effects.js"></script>
     <script src="js/renderer.js"></script>
+    <script src="js/typing.js"></script>
+    <script src="js/style-switcher.js"></script>
+    <script src="js/form.js"></script>
   </body>
 </html>
